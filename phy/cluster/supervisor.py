@@ -700,6 +700,7 @@ class Supervisor(object):
             logger.info("Merge clusters %s to %s.", ', '.join(map(str, up.deleted)), up.added[0])
         else:
             logger.info("Assigned %s spikes.", len(up.spike_ids))
+            logger.info("Split cluster %s.", up)
 
     def _log_action_meta(self, sender, up):
         """Log the cluster meta action (move, label)."""
